@@ -1,15 +1,10 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-// import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-// import "../style/Loginstyle.css";
 
 const API_KEY = process.env.REACT_APP_APIKEY;
 const LoginForm = () => {
-    //   const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(false);
     const formik = useFormik({
         initialValues: {

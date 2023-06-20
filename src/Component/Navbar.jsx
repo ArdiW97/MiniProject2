@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
@@ -113,27 +110,27 @@ const Signup = () => {
                         <div className="offcanvas-body">
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="#">Home</a>
+                                    <a className="nav-link" aria-current="page" href="##">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">About Me</a>
+                                    <a className="nav-link" href="##">About Me</a>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a className="nav-link dropdown-toggle" href="##" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Genre
                                     </a>
                                     <ul className="dropdown-menu dropdown-menu-dark">
-                                        <li><a className="dropdown-item" href="#">Action</a></li>
-                                        <li><a className="dropdown-item" href="#">War</a></li>
-                                        <li><a className="dropdown-item" href="#">Horror</a></li>
-                                        <li><a className="dropdown-item" href="#">Anime</a></li>
+                                        <li><a className="dropdown-item" href="##">Action</a></li>
+                                        <li><a className="dropdown-item" href="##">War</a></li>
+                                        <li><a className="dropdown-item" href="##">Horror</a></li>
+                                        <li><a className="dropdown-item" href="##">Anime</a></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item">
                                     {localStorage.getItem("SID") ? (
                                         <a className="dropdown-item">{username}</a>
                                     ) : (
-                                        <a className="login-trigger" href="#" data-bs-target="#login" data-bs-toggle="modal">Login</a>
+                                        <a className="login-trigger" href="##" data-bs-target="#login" data-bs-toggle="modal">Login</a>
                                     )}
                                 </li>
                                 <li className="nav-item">

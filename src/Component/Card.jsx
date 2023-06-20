@@ -1,10 +1,7 @@
 import React from "react";
-import { Card } from "react-bootstrap"
 import "../Style/Card.css"
 import { getMovieList, searchMovie } from '../Api';
 import { useEffect, useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 
 const Movie = () => {
     const [popularMovies, setPopularMovies] = useState([])
@@ -24,35 +21,38 @@ const Movie = () => {
 
     const PopularMoviesList = () => {
         return popularMovies.map((movie, i) => {
-            return (
-                <>
-                    <div className="card" style={{ width: "18rem" }} key={movie.id}>
-                        <img src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`}
-                            className="card-img-top"
-                            alt="..."
-                            data-bs-target={`#movie-card${movie.id}`}
-                            data-bs-toggle="modal" />
+          return (
+            <React.Fragment key={movie.id}>
+              <div className="card" style={{ width: "18rem" }}>
+                <img
+                  src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`}
+                  className="card-img-top"
+                  alt="..."
+                  data-bs-target={`#movie-card${movie.id}`}
+                  data-bs-toggle="modal"
+                />
+              </div>
+      
+              <div id={`movie-card${movie.id}`} className="modal" role="dialog">
+                <div className="modal-dialog">
+                  <div className="modal-content">
+                    <div className="modal-body">
+                      <h5 className="modal-title">{movie.title}</h5>
+                      <p className="modal-text">{movie.overview}</p>
+                      <ul className="list-group list-group-flush">
+                        <li className="movie-date">Release: {movie.release_date}</li>
+                        <li className="movie-vote">Rate: {movie.vote_average}</li>
+                        <li className="movie-id">Id: {movie.id}</li>
+                      </ul>
                     </div>
-
-                    <div id={`movie-card${movie.id}`} className="modal" role="dialog">
-                        <div className="modal-dialog">
-                            <div className="modal-content">
-                                <div className="modal-body`">
-                                    <h5 className="modal-title">{movie.title}</h5>
-                                    <p className="modal-text">{movie.overview}</p>
-                                    <ul className="list-group list-group-flush">
-                                        <span className="movie-date">Release: {movie.release_date}</span>
-                                        <span className="movie-vote">Rate: {movie.vote_average}</span>
-                                        <span className="movie-id">Id: {movie.id}</span>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </>
-            )
-        })
-    }
+                  </div>
+                </div>
+              </div>
+            </React.Fragment>
+          );
+        });
+      };
+      
     return (
         <>
             <div className="App">
