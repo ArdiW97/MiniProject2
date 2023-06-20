@@ -98,7 +98,8 @@ const Signup = () => {
         <>
             <nav className="navbar bg-dark fixed-top">
                 <div className="container-fluid">
-                    <a className="navbar-brand">T-Movies</a>
+                    
+                    <div className="navbar-brand">T-Movies</div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -127,17 +128,19 @@ const Signup = () => {
                                     </ul>
                                 </li>
                                 <li className="nav-item">
+                                    
                                     {localStorage.getItem("SID") ? (
-                                        <a className="dropdown-item">{username}</a>
+                                        <div className="dropdown-item">{username}</div>
                                     ) : (
                                         <a className="login-trigger" href="##" data-bs-target="#login" data-bs-toggle="modal">Login</a>
                                     )}
                                 </li>
                                 <li className="nav-item">
+                                        
                                     {localStorage.getItem("SID") ? (
-                                        <a className="prof" onClick={handleLogout}>logout</a>
+                                        <div className="prof" onClick={handleLogout}>logout</div>
                                     ) : (
-                                        <a className="dropdown-item">login to see more movies</a>
+                                        <div className="dropdown-item">login to see more movies</div>
                                     )}
                                 </li>
                             </ul>
