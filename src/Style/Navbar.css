@@ -1,0 +1,146 @@
+/* Navbar */
+.nav-item {
+    color: whitesmoke;
+  }
+  
+  .nav-link {
+    color: whitesmoke;
+  }
+
+.offcanvas-title {
+    color: whitesmoke;
+    font-family: 'Lobster', cursive;
+}
+
+  .navbar-brand span {
+    transition: 0.2s ease-in-out;
+  }
+  
+  .navbar-brand:hover span:nth-child(1) {
+    margin-right: 5px;
+  }
+  
+  .navbar-brand:hover span:nth-child(2) {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .navbar-brand:hover span:nth-child(3) {
+    margin-left: 5px;
+  }
+  
+  .navbar-brand:hover span {
+    color: #EEEEEE;
+    text-shadow: 0 0 10px #EEEEEE, 0 0 20px #EEEEEE;
+  }
+  
+  .navbar-brand>span {
+    font-family: 'Lobster', cursive;
+    color: #f6a973;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+  }
+  
+  .navbar-brand {
+    font-family: 'Lobster', cursive;
+    color: white;
+    font-size: 3rem;
+  }
+  
+  .navbar-brand:hover {
+    color: #30edf4;
+    font-family: 'Lobster', cursive;
+  }
+  
+  .collapse {
+    font-family: Georgia, 'Times New Roman', Times, serif, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar ul li {
+    list-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1px;
+    transition: 0.5s ease;
+  }
+  
+  .nav-link:hover {
+    color: #30edf4;
+  }
+  
+  .dropdown-item:hover {
+    color: #30edf4;
+  }
+
+  .navbar-toggler {
+    background-color: #EEEEEE;
+  }
+
+
+  /* .login-trigger {
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to bottom right, #B05574, #F87E7B);
+    padding: 15px 30px;
+    border-radius: 30px;
+    position: relative; 
+    top: 50%;
+  } */
+  
+  /*Modal*/
+  h4 {
+    font-weight: bold;
+    color: #fff;
+  }
+  .close {
+    color: #fff;
+    transform: scale(1.2)
+  }
+  .modal-content {
+    font-weight: bold;
+    background: linear-gradient(to bottom right,#F87E7B,#B05574);
+  }
+  .form-control {
+    margin: 1em 0;
+  }
+  .form-control:hover, .form-control:focus {
+    box-shadow: none;  
+    border-color: #fff;
+  }
+  .username, .password {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 2px solid #eee;
+    padding-left: 0;
+    font-weight: normal;
+    background: transparent;  
+  }
+  .form-control::-webkit-input-placeholder {
+    color: #eee;  
+  }
+  .form-control:focus::-webkit-input-placeholder {
+    font-weight: bold;
+    color: #fff;
+  }
+  .login {
+    padding: 6px 20px;
+    border-radius: 20px;
+    background: none;
+    border: 2px solid #FAB87F;
+    color: #FAB87F;
+    font-weight: bold;
+    transition: all .5s;
+    margin-top: 1em;
+  }
+  .login:hover {
+    background: #FAB87F;
+    color: #fff;
+  }
